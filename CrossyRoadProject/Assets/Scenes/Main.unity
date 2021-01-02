@@ -222,6 +222,9 @@ GameObject:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 2d3413b... Row generation + camera following only on X axis
 =======
 >>>>>>> parent of 2d3413b... Row generation + camera following only on X axis
 =======
@@ -236,8 +239,13 @@ Rigidbody:
   serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Mass: 1
   m_Drag: 0
+=======
+  m_Mass: 1.5
+  m_Drag: 6
+>>>>>>> parent of 2d3413b... Row generation + camera following only on X axis
 =======
   m_Mass: 1.5
   m_Drag: 6
@@ -279,6 +287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   rb: {fileID: 0}
   isGrounded: 0
   jumpVelocity: 3
@@ -299,12 +308,17 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> parent of 2d3413b... Row generation + camera following only on X axis
+=======
+>>>>>>> parent of 2d3413b... Row generation + camera following only on X axis
   speed: 20
   rb: {fileID: 566209703}
   jumpForce: 6
   jump: {x: 0, y: 0, z: 0}
   isGrounded: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 2d3413b... Row generation + camera following only on X axis
+=======
 >>>>>>> parent of 2d3413b... Row generation + camera following only on X axis
 =======
 >>>>>>> parent of 2d3413b... Row generation + camera following only on X axis
@@ -403,8 +417,11 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2d3413bbfae45167a5063e7ddbcfb6118c95a938
+=======
+>>>>>>> parent of 2d3413b... Row generation + camera following only on X axis
 =======
 >>>>>>> parent of 2d3413b... Row generation + camera following only on X axis
 =======
