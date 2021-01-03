@@ -4,26 +4,35 @@ using UnityEngine;
 
 public class MovementScript : MonoBehaviour
 {
-    [SerializeField] private float speed = 0.25f;
     private Rigidbody rb;
-    [SerializeField] public float jumpForce = 2.1f;
-
-    public Vector3 jump;
     public bool isGrounded;
+
+    [Range(1, 10)] public float jumpVelocity;
+    [Range(1, 10)] public float playerVelocity;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        jump = new Vector3(speed, jumpForce, 0);
     }
-
-
-    private void FixedUpdate()
+    
+    private void Update()
     {
-        if (Input.GetKey(KeyCode.W) && isGrounded)
+        if (isGrounded)
         {
-            rb.AddForce(jump, ForceMode.Impulse);
-            isGrounded = false;
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                rb.velocity = new Vector3(playerVelocity, jumpVelocity, 0);
+            }
+
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                rb.velocity = new Vector3(0, jumpVelocity, playerVelocity);
+            }
+
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                rb.velocity = new Vector3(0, jumpVelocity, -playerVelocity);
+            }
         }
     }
 

@@ -11,7 +11,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/FollowObjectScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BetterJumpScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -19,6 +19,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/RowGenerationScript.cs" />
       <option value="$PROJECT_DIR$/Assets/FollowObjectScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MovementScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BetterJumpScript.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mSW1ztmT4cDwJX3kN7Elqlbv54" />
@@ -65,6 +66,7 @@
       <workItem from="1609487275267" duration="154000" />
       <workItem from="1609590097128" duration="144000" />
       <workItem from="1609590532275" duration="2191000" />
+      <workItem from="1609660299638" duration="1052000" />
     </task>
     <servers />
   </component>
