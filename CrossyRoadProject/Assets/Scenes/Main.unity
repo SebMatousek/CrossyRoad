@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -160,7 +160,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70192850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.2, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 874333057}
@@ -342,7 +342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874333054}
   m_LocalRotation: {x: 0.35355338, y: 0.35355338, z: -0.1464466, w: 0.8535535}
-  m_LocalPosition: {x: 0, y: 7.5, z: -6}
+  m_LocalPosition: {x: 0.89, y: 7.5, z: -6.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 70192852}
@@ -446,10 +446,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b5ca6f2a46b6445ab1589815892217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfRowsToGenerate: 100
+  numberOfRowsToGenerate: 10
   rowPrefabs:
   - {fileID: 5385976742527123083, guid: d1c0477ddbd729144b33108b3f37103d, type: 3}
   - {fileID: 3852388404711994132, guid: 3aba542996d269942a1c6d166e44abcc, type: 3}
+  - {fileID: 7966761651502647918, guid: b6addd93db07c174891eedc35e2635d5, type: 3}
+  grassObjectPrefabs:
+  - {fileID: 3527954356240191466, guid: ac031bf180e523a4db1321696d6170a5, type: 3}
+  - {fileID: 3201039017233716478, guid: c9f9529c83360154aa6141f1d6b03c4e, type: 3}
+  - {fileID: 7016126842751680602, guid: 4ecb1d317748fd140b82bf6f1e41a2cf, type: 3}
+  roadObjectPrefabs:
+  - {fileID: 3398007228038463112, guid: 351e61ae710eb844695b3a81781d8434, type: 3}
+  waterObjectPrefabs:
+  - {fileID: 3311944326764769901, guid: ed4daab956f0d8b4ea2dc97891586c83, type: 3}
+  grassObjectGenerationChance: 10
+  carGenerationChance: 5
+  waterObjectGenerationChance: 10
 --- !u!4 &2114788401
 Transform:
   m_ObjectHideFlags: 0

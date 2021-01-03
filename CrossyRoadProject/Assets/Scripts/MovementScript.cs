@@ -27,11 +27,20 @@ public class MovementScript : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.A))
             {
                 rb.velocity = new Vector3(0, jumpVelocity, playerVelocity);
+                Quaternion target = Quaternion.Euler(0, -200, 0);
+                transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * 60.0f);
             }
 
             if (Input.GetKeyDown(KeyCode.D))
             {
                 rb.velocity = new Vector3(0, jumpVelocity, -playerVelocity);
+                Quaternion target = Quaternion.Euler(0, 0, 0);
+                transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * 60.0f);
+            }
+            else
+            {
+                Quaternion target = Quaternion.Euler(0, -90, 0);
+                transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * 20.0f);
             }
         }
     }

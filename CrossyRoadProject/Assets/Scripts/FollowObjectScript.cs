@@ -8,6 +8,6 @@ public class FollowObjectScript : MonoBehaviour
 
     private void Update()
     {
-        transform.position = new Vector3(objectToFollow.position.x, 0, 0);
+        transform.position = new Vector3(objectToFollow.position.x - 6.5f, 5, objectToFollow.position.z);
     }
 }

@@ -6,16 +6,107 @@ public class RowGenerationScript : MonoBehaviour
 {
     [SerializeField] private int numberOfRowsToGenerate;
     [SerializeField] private GameObject[] rowPrefabs;
+    [SerializeField] private GameObject[] grassObjectPrefabs;
+    [SerializeField] private GameObject[] roadObjectPrefabs;
+    [SerializeField] private GameObject[] waterObjectPrefabs;
+
+    [Range(0, 100)]
+    public int grassObjectGenerationChance;
+    [Range(0, 100)]
+    public int carGenerationChance;
+    [Range(0, 100)]
+    public int waterObjectGenerationChance;
+
+
     private GameObject _rowToGenerate;
+
+    char terrainType;
+    int dice;
 
     private void Start()
     {
-        for (var i = 0; i < numberOfRowsToGenerate; i++)
+        for (var i = -3; i < numberOfRowsToGenerate; i++)
         {
-            var index = Random.Range (0, rowPrefabs.Length);
-            _rowToGenerate = rowPrefabs[index];
-            Instantiate(_rowToGenerate, new Vector3(i, 0, 0), Quaternion.identity);
+
+            if (i > -3 && i < 3)
+            {
+                Instantiate(rowPrefabs[0], new Vector3(i, 0, 0), Quaternion.identity);
+                terrainType = 'g';
+            }
+            else
+            {
+                generateRow(i);
+            }
         }
     }
 
+    private void FixedUpdate()
+    {
+        var Object = GameObject.FindGameObjectsWithTag("Object");
+
+        for (int i = 0; i < Object.Length; i++)
+        {
+            if (Object[i].transform.position.x < GameObject.Find("Chicken").transform.position.x - 5)
+            {
+                Destroy(Object[i]);
+            }
+        }
+
+        if (Object[Object.Length - 1].transform.position.x < GameObject.Find("Chicken").transform.position.x + 15.0f)
+        {
+            generateRow(Object[Object.Length - 1].transform.position.x + 1.0f);
+        }
+
+        //Check if it is water or road and spawn cars and logs
+        /*
+        for (int i = 0; i < Object.Length; i++)
+        {
+            if (Object[i] == 0)
+            {
+                
+            }
+        }*/
+        
+
+
+    }
+
+    private void generateRow(float x)
+    {
+        dice = Random.Range(0, 100);
+
+        if (dice < 20)
+        {
+            Instantiate(rowPrefabs[2], new Vector3(x, 0, 0), Quaternion.identity);
+            terrainType = 'w';
+        }
+        else
+        {
+            var index = Random.Range(0, rowPrefabs.Length - 1);
+            _rowToGenerate = rowPrefabs[index];
+            Instantiate(_rowToGenerate, new Vector3(x, 0, 0), Quaternion.identity);
+            if (index == 0)
+            {
+                terrainType = 'g';
+            }
+            else
+            {
+                terrainType = 'r';
+            }
+        }
+
+        for (int j = -10; j < 10; j++)
+        {
+            if (terrainType == 'g')//terrain is grass
+            {
+                dice = Random.Range(0, 100);
+                if (dice < grassObjectGenerationChance)
+                {
+                    dice = Random.Range(0, grassObjectPrefabs.Length);
+                    var objectToGenerate = grassObjectPrefabs[dice];
+                    Instantiate(objectToGenerate, new Vector3(x, 0.5f, j), Quaternion.identity);
+                }
+            }
+        }
+    }
 }
