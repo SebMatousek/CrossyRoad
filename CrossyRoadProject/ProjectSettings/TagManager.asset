@@ -4,10 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Row
   - Object
-  - WaterObject
-  - RoadObject
+  - MovingObject
   layers:
   - Default
   - TransparentFX

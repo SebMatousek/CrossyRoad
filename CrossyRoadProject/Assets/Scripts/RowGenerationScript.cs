@@ -75,23 +75,37 @@ public class RowGenerationScript : MonoBehaviour
     {
         dice = Random.Range(0, 100);
 
-        if (dice < 20)
+        
+        if(dice < 30)//Grass
         {
-            Instantiate(rowPrefabs[2], new Vector3(x, 0, 0), Quaternion.identity);
-            terrainType = 'w';
-        }
-        else
-        {
-            var index = Random.Range(0, rowPrefabs.Length - 1);
-            _rowToGenerate = rowPrefabs[index];
+            _rowToGenerate = rowPrefabs[0];
             Instantiate(_rowToGenerate, new Vector3(x, 0, 0), Quaternion.identity);
-            if (index == 0)
+            terrainType = 'g';
+        }
+        else if(dice < 80)//Road
+        {
+            _rowToGenerate = rowPrefabs[1];
+            Instantiate(_rowToGenerate, new Vector3(x, 0, 0), Quaternion.identity);
+            terrainType = 's';
+        }
+        else//Water
+        {
+            dice = Random.Range(0, 100);
+
+            if (dice < 33)
             {
-                terrainType = 'g';
+                Instantiate(rowPrefabs[2], new Vector3(x, 0, 0), Quaternion.Euler(0, 180, 0));
+                terrainType = 'w';
+            }
+            else if (dice < 66)
+            {
+                Instantiate(rowPrefabs[3], new Vector3(x, 0, 0), Quaternion.Euler(0, 180, 0));
+                terrainType = 'w';
             }
             else
             {
-                terrainType = 'r';
+                Instantiate(rowPrefabs[4], new Vector3(x, 0, 0), Quaternion.Euler(0, 180, 0));
+                terrainType = 'w';
             }
         }
 
@@ -104,7 +118,7 @@ public class RowGenerationScript : MonoBehaviour
                 {
                     dice = Random.Range(0, grassObjectPrefabs.Length);
                     var objectToGenerate = grassObjectPrefabs[dice];
-                    Instantiate(objectToGenerate, new Vector3(x, 0.5f, j), Quaternion.identity);
+                    Instantiate(objectToGenerate, new Vector3(x, 0.6f, j), Quaternion.identity);
                 }
             }
         }

@@ -7,8 +7,8 @@ public class MovementScript : MonoBehaviour
     private Rigidbody rb;
     public bool isGrounded;
 
-    [Range(1, 10)] public float jumpVelocity;
-    [Range(1, 10)] public float playerVelocity;
+    [Range(0, 10)] public float jumpVelocity;
+    [Range(0, 10)] public float playerVelocity;
 
     private void Start()
     {
@@ -19,19 +19,19 @@ public class MovementScript : MonoBehaviour
     {
         if (isGrounded)
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKey(KeyCode.W))
             {
                 rb.velocity = new Vector3(playerVelocity, jumpVelocity, 0);
             }
 
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKey(KeyCode.A))
             {
                 rb.velocity = new Vector3(0, jumpVelocity, playerVelocity);
                 Quaternion target = Quaternion.Euler(0, -200, 0);
                 transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * 60.0f);
             }
 
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKey(KeyCode.D))
             {
                 rb.velocity = new Vector3(0, jumpVelocity, -playerVelocity);
                 Quaternion target = Quaternion.Euler(0, 0, 0);

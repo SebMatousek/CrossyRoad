@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -166,6 +166,49 @@ Transform:
   - {fileID: 874333057}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &469803758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 469803760}
+  - component: {fileID: 469803759}
+  m_Layer: 0
+  m_Name: Game
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &469803759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469803758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605a0a468a7e4624ab5310b2b5d59a25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &469803760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469803758}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.9770508, y: 1.8920898, z: -0.5595703}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &489228274
 GameObject:
@@ -355,6 +398,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 566209705, guid: 00ad4f98b69a94d41b1075f781408b8a, type: 3}
+      propertyPath: jumpVelocity
+      value: 5.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 566209705, guid: 00ad4f98b69a94d41b1075f781408b8a, type: 3}
+      propertyPath: playerVelocity
+      value: 6.9
+      objectReference: {fileID: 0}
     - target: {fileID: 1572201901992998351, guid: 00ad4f98b69a94d41b1075f781408b8a,
         type: 3}
       propertyPath: m_Name
@@ -363,7 +414,7 @@ PrefabInstance:
     - target: {fileID: 2205151797298605941, guid: 00ad4f98b69a94d41b1075f781408b8a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2205151797298605941, guid: 00ad4f98b69a94d41b1075f781408b8a,
         type: 3}
@@ -383,7 +434,7 @@ PrefabInstance:
     - target: {fileID: 2205151797298605941, guid: 00ad4f98b69a94d41b1075f781408b8a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.218
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 2205151797298605941, guid: 00ad4f98b69a94d41b1075f781408b8a,
         type: 3}
@@ -458,17 +509,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOfRowsToGenerate: 10
   rowPrefabs:
-  - {fileID: 5385976742527123083, guid: d1c0477ddbd729144b33108b3f37103d, type: 3}
-  - {fileID: 3852388404711994132, guid: 3aba542996d269942a1c6d166e44abcc, type: 3}
-  - {fileID: 8948295654129626604, guid: f2e8ba45dde648d4ba40fcc7da67cc01, type: 3}
+  - {fileID: 2435032641367571015, guid: e0b788c5837664c40bc11ce925df6c90, type: 3}
+  - {fileID: 7445995952691196844, guid: f165392e8352f1c459d15a3c248067f1, type: 3}
+  - {fileID: 7358402208134395015, guid: fc82d831570458a4ea8157d309bd136f, type: 3}
+  - {fileID: 5931220011584524135, guid: 52debc82f0577554188f35734157b449, type: 3}
+  - {fileID: 7046361939101707720, guid: f30739a004c156e43b17e6822ec49af0, type: 3}
   grassObjectPrefabs:
-  - {fileID: 3527954356240191466, guid: ac031bf180e523a4db1321696d6170a5, type: 3}
-  - {fileID: 8633444932679062911, guid: c9f9529c83360154aa6141f1d6b03c4e, type: 3}
-  - {fileID: 1254904868915405125, guid: a8bfcbf8a7e8bf04c890b128e9c5a4f6, type: 3}
+  - {fileID: 6118960779163620623, guid: a19bfcd621d506043b159905b9e060ac, type: 3}
+  - {fileID: 8685344166612788941, guid: c84cf7d7232775d41aea0c92099ec3ff, type: 3}
+  - {fileID: 7249077720998735944, guid: efae965cf5ae5a04599f096474a9bbb2, type: 3}
+  - {fileID: 4090536107529652208, guid: dced45c202ec1a746896affe4425e9fa, type: 3}
+  - {fileID: 3019853914345280848, guid: 03a3e575cc4a022489e97e7df10eb193, type: 3}
+  - {fileID: 3452764225677891496, guid: 5f4d3b074fea13448af4990ef395cd04, type: 3}
   roadObjectPrefabs:
   - {fileID: 3398007228038463112, guid: 351e61ae710eb844695b3a81781d8434, type: 3}
   waterObjectPrefabs:
-  - {fileID: 3311944326764769901, guid: ed4daab956f0d8b4ea2dc97891586c83, type: 3}
+  - {fileID: 7021099186886165672, guid: 5c465ca8f7ba67c4896b91781125568c, type: 3}
   grassObjectGenerationChance: 10
   carGenerationChance: 5
   waterObjectGenerationChance: 10
@@ -484,5 +540,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
