@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -363,7 +363,17 @@ PrefabInstance:
     - target: {fileID: 2205151797298605941, guid: 00ad4f98b69a94d41b1075f781408b8a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2205151797298605941, guid: 00ad4f98b69a94d41b1075f781408b8a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2205151797298605941, guid: 00ad4f98b69a94d41b1075f781408b8a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5000001
       objectReference: {fileID: 0}
     - target: {fileID: 2205151797298605941, guid: 00ad4f98b69a94d41b1075f781408b8a,
         type: 3}
@@ -373,7 +383,7 @@ PrefabInstance:
     - target: {fileID: 2205151797298605941, guid: 00ad4f98b69a94d41b1075f781408b8a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3
+      value: 0.218
       objectReference: {fileID: 0}
     - target: {fileID: 2205151797298605941, guid: 00ad4f98b69a94d41b1075f781408b8a,
         type: 3}
@@ -388,7 +398,7 @@ PrefabInstance:
     - target: {fileID: 2205151797298605941, guid: 00ad4f98b69a94d41b1075f781408b8a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2205151797298605941, guid: 00ad4f98b69a94d41b1075f781408b8a,
         type: 3}
@@ -450,11 +460,11 @@ MonoBehaviour:
   rowPrefabs:
   - {fileID: 5385976742527123083, guid: d1c0477ddbd729144b33108b3f37103d, type: 3}
   - {fileID: 3852388404711994132, guid: 3aba542996d269942a1c6d166e44abcc, type: 3}
-  - {fileID: 7966761651502647918, guid: b6addd93db07c174891eedc35e2635d5, type: 3}
+  - {fileID: 8948295654129626604, guid: f2e8ba45dde648d4ba40fcc7da67cc01, type: 3}
   grassObjectPrefabs:
   - {fileID: 3527954356240191466, guid: ac031bf180e523a4db1321696d6170a5, type: 3}
-  - {fileID: 3201039017233716478, guid: c9f9529c83360154aa6141f1d6b03c4e, type: 3}
-  - {fileID: 7016126842751680602, guid: 4ecb1d317748fd140b82bf6f1e41a2cf, type: 3}
+  - {fileID: 8633444932679062911, guid: c9f9529c83360154aa6141f1d6b03c4e, type: 3}
+  - {fileID: 1254904868915405125, guid: a8bfcbf8a7e8bf04c890b128e9c5a4f6, type: 3}
   roadObjectPrefabs:
   - {fileID: 3398007228038463112, guid: 351e61ae710eb844695b3a81781d8434, type: 3}
   waterObjectPrefabs:
@@ -474,5 +484,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
