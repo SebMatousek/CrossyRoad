@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 5989040531013564625}
   m_Layer: 0
   m_Name: RoadRow
-  m_TagString: Object
+  m_TagString: Row
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,5 +171,5 @@ MonoBehaviour:
   spawnPoint: {fileID: 8950495838726974203}
   carPrefab: {fileID: 3398007228038463112, guid: 351e61ae710eb844695b3a81781d8434,
     type: 3}
-  spawnChance: 5
+  spawnChance: 4
   cooldown: 25

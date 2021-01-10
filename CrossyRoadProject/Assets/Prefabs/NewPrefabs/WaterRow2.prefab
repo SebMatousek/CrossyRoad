@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: -5959613968015236177}
   m_Layer: 0
   m_Name: WaterRow2
-  m_TagString: Object
+  m_TagString: Row
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,5 +171,5 @@ MonoBehaviour:
   spawnPoint: {fileID: 8836644437688401623}
   logPrefab: {fileID: 7021099186886165672, guid: 5c465ca8f7ba67c4896b91781125568c,
     type: 3}
-  spawnChance: 10
+  spawnChance: 15
   cooldown: 80

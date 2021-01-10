@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Object
   - MovingObject
+  - Row
   layers:
   - Default
   - TransparentFX

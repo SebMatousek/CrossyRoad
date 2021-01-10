@@ -52,6 +52,17 @@ public class RowGenerationScript : MonoBehaviour
             }
         }
 
+        Object = GameObject.FindGameObjectsWithTag("Row");
+
+        for (int i = 0; i < Object.Length; i++)
+        {
+            if (Object[i].transform.position.x < GameObject.Find("Chicken").transform.position.x - 5)
+            {
+                Destroy(Object[i]);
+            }
+        }
+
+
         if (Object[Object.Length - 1].transform.position.x < GameObject.Find("Chicken").transform.position.x + 15.0f)
         {
             generateRow(Object[Object.Length - 1].transform.position.x + 1.0f);
